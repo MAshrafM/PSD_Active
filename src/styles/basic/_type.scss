@@ -1,1 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700,900|Raleway:300,400,700,900|Cardo:400i');
 
+
+$main-font: 'Raleway', sans-serif;
+$nav-font-color: rgba(255, 255, 255, 0.75);
+$secondary-font: 'Open Sans', sans-serif;
+$hero-font-color: white;
+$clients-font: 'Cardo', serif;
+$credits-main-font-color: $nav-font-color;
+$credits-add-font-color: $hero-font-color;
+$footer-font-color: $nav-font-color;
+$footer-main-color: $hero-font-color;
+
+@mixin boldedUpperCaseText($size){
+  font-size: $size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body{
+  font-family: $main-font;
+}
