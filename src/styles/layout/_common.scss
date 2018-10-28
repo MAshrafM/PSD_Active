@@ -1,0 +1,17 @@
+.btn{ 
+  text-transform: uppercase;
+  padding: 10px 25px;
+  background-color: $button-color;
+  border: 0;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  color: $nav-font-color;
+  transition: .3s;
+  
+  &:hover{
+    background-color: adjust-color($button-color, $red: -32, $green: -32, $blue: -32);
+    color: $hero-font-color;
+    font-weight: 600;
+  }
+}

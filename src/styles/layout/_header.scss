@@ -1,0 +1,113 @@
+header{
+  
+  &::after{
+    content: '';
+    background-image: url('../images/bg1.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  &.jumbotron{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin-bottom: 0;
+    
+    .wrapper{
+      background-color: $hero-layer-color;
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  
+  .jumbotron__content{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    color: $hero-font-color;
+    text-align: center;
+    
+    h1{
+      @include boldedUpperCaseText(65px);
+      font-family: $secondary-font;
+      flex: 0 1 auto;
+      max-width: 900px;
+      margin-top: $nav-height;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    p{
+      font-size: 22px;
+      max-width: 875px;
+      font-weight: 300;
+      flex: 0 1 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    a{
+      margin-top: 80px;
+      padding: 15px 50px; 
+    }
+  }
+  
+  
+  .navbar{
+    top: ($nav-height -50px)/2;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    
+    .navbar-bottom-line{
+      border-bottom: 1px solid rgba(255, 255, 255, .15);
+      margin-top: ($nav-height - 50px)/2;
+    }
+  }
+  .navbar-nav{
+    li{
+      a{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: $nav-font-color;
+        @include boldedUpperCaseText(13px);
+        
+        transition-property: color, background, padding, margin, text-shadow;
+        transition-duration: .3s, .3s, .3s, .3s, .3s;
+        transition-delay: .0s, .3s, .3s, .3s, .0s;
+        &:hover{
+          background-color: rgba(238, 238, 238, 0.15);
+          color: white;
+          transition-property: color, background, padding, margin, text-shadow;
+          transition-duration: .3s, .3s, .3s, .3s, .3s;
+          transition-delay: .3s, .0s, 0s, 0s, .3s;
+          padding-bottom: 20px;
+          margin-top: -5px;
+          text-shadow: 2px 2px 4px #000;
+        }
+      }
+    }
+  }
+  .navbar-toggler{
+    position: relative;
+    z-index: 2;
+    color: $nav-font-color;
+  }
+}
