@@ -9,7 +9,12 @@
       text-align: center; 
       height: 350px;
       padding: 1px;
-      
+      @include breakpoint(tablet){
+        height: calc(250px + 100 * ((100vw - 768px) / 1400));
+      }
+      @include breakpoint(landscape){
+        height: calc(250px + 100 * ((100vw - 576px) / 1400));
+      }
       .tile{
         height: 100%;
         display: block;
