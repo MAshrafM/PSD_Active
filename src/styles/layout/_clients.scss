@@ -1,0 +1,51 @@
+.clients{
+  padding: 80px 0 0 0; 
+  .carousel{
+    background-color: #533549;
+  }
+  .carousel-caption{
+    background-color: rgba(83, 53, 73, .7);
+    /*margin-bottom: 20px;
+    padding: 20px 25px;
+    position: static;*/
+    left: 70%;
+    right: 5%;
+    bottom: 25%;
+    @include breakpoint(tablet){
+      left: 55%;
+    }
+    @include breakpoint(landscape){
+      left: 50%;
+    }  
+    @include breakpoint(portrait){
+      left: 50%;
+    }
+    q{
+      font-family: $clients-font;
+      font-style: italic;
+      font-size: calc(15px + 5 * ((100vw - 320px) / 448));
+    }
+    p{
+      @include boldedUpperCaseText(13px);
+      margin-top: 30px;
+    }
+  }
+  .carousel-indicators{
+    left: 75%;
+    right: 10%;
+    margin-left: 0;
+    margin-right: 0;
+    @include breakpoint(tablet){
+      left: 60%;
+      bottom: 25%;
+    }
+    @include breakpoint(landscape){
+      left: 55%;
+      bottom: 25%;
+    }
+    @include breakpoint(portrait){
+      left: 55%;
+      bottom: 25%;
+    }
+  }
+}
