@@ -11,4 +11,14 @@ $(function() {
       });
     }
   });
+  
+  $('.back-to-top').on('click', function(event){
+    let scroll_duration = $('.back-to-top').offset().top /2.5;
+    event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0 ,
+      }, scroll_duration
+    );
+  });
 });
+
